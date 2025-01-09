@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop-style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Our Shop</h1>
+    </header>
+    <main class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <img src="{% static 'images/product_1.jpg' %}" alt="Large candles" class="product-image">
+            <h2>Large candles</h2>
+            <p class="product-description">Normal large candles in attractive designs.
+                Available in 7 fragrances.
+            </p>
+            <p class="product-price">Rs.150</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <img src="{% static 'images/product_2.jpg' %}" alt="Jar candles" class="product-image">
+            <h2>Jar candles</h2>
+            <p class="product-description">Wax candles stored in a reusable jar.
+                Available in 7 fragrances.
+            </p>
+            <p class="product-price">Rs.400</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <img src="{% static 'images/product_3.jpg' %}" alt="Bubble candles" class="product-image">
+            <h2>Bubble candles</h2>
+            <p class="product-description">Three/two layered bubble waxed candles.
+                Available in 4 different fragrances.
+                Available in mixed and specific both fragrances.
+            </p>
+            <p class="product-price">Rs.250</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    background: #bf1eb7;
+    background-image: url('/static/images/logo_circular.png');
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #060404;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #ffefdd, #fff8f3);
+    background-color: #811072;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #d35400;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d35400;
+    display: inline-block;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* About Image */
+.about-image {
+    flex: 1;
+    position:static;
+    overflow: hidden;
+    background-color: #efe8e8;
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/jar-candle.jpg') no-repeat center/cover;
+    opacity: 0.8;
+    filter: blur(2px);
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('images/bubble-candle.jpg') no-repeat center/cover;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Vertical Text */
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: rotate(-90deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #2507a0;
+    z-index: 3;
+}

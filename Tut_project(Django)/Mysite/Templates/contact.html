@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Contact Us</h1>
+        <p>Your feedback and inquiries mean the world to us! Let’s connect and make great things happen together.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <!-- Description Section -->
+        <section class="description">
+            <h2>Who We Are</h2>
+            <p id="para_1">
+                <b><i>Contact us on the below given details</i></b> 
+            </p>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Feedback" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Submit Feedback</button>
+                <button type="submit" class="cta-button">Chat with us</button>
+            </form>
+        </section>
+
+        <!-- Social Media Section -->
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <img src="{% static 'images/fb.jpg' %}" alt="Facebook">
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+                    <img src="{% static 'images/wp.jpg' %}" alt="WhatsApp">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <img src="{% static 'images/insta.webp' %}" alt="Instagram">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LUXE-CEREUS officials. All rights reserved.</p>
+    </footer>
+</body>
+</html>
